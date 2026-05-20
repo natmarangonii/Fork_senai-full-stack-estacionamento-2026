@@ -19,7 +19,3 @@ Um projeto que envolve ligação entre Backend e Frontend, a partir de um **Fork
 3. Abrir o **index** com o **Live Server**
 4. Testar o Projeto
 
-## Documentos
-|![img](/assets/veiculos.png)|![img](/assets/estadia.png)
-|:-:|:-:|
-|Tela 01|Tela 02|
