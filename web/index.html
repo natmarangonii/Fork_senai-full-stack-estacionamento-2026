@@ -53,9 +53,6 @@
                 <label>Telefone</label>
                 <input type="tel" id="telefone" required>
 
-                <label>URL da Imagem</label>
-                <input type="text" id="imagem">
-
                 <br><br>
                 <button type="reset" onclick="cadastro.classList.add('oculto')">
                     Cancelar
@@ -70,7 +67,6 @@
     <div id="detalhes" class="modal oculto">
         <div class="janela">
             <h2 id="tituloAuto"></h2>
-            <img id="imgAuto">
 
             <label><b>Placa</b></label>
             <input type="text" id="placaEdit" disabled>
@@ -100,9 +96,6 @@
 
             <label><b>Telefone</b></label>
             <input type="tel" id="telefoneEdit">
-
-            <label><b>Imagem (URL)</b></label>
-            <input type="text" id="imgEdit">
 
             <br><br>
             <button onclick="salvarEdicao()">Salvar</button>
