@@ -19,3 +19,13 @@ Um projeto que envolve ligação entre Backend e Frontend, a partir de um **Fork
 3. Abrir o **index** com o **Live Server**
 4. Testar o Projeto
 
+## Documentos - Diagramas de Casos de Uso
+|![img](/docs/veiculo.png)|![img](/docs/estadia.png)
+|:-:|:-:|
+|Automóveis|Estadias|
+
+## Documentos - Diagramas de Atividades
+|![img](/docs/DiagAuto.png)|![img](/docs/DiagEstadia.png)|![img](/docs/saidadiag.png)
+|:-:|:-:|:-:
+|Automóveis|Estadias|Saídas
+
