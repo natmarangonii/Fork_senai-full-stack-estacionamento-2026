@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estacionamento - Estadias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Estacionamento</h1>
+        <nav>
+            <a href="index.html">Automóveis</a>
+            <a href="estadias.html" class="ativo">Estadias</a>
+        </nav>
+        <button onclick="cadastroEstadia.classList.remove('oculto')">
+            Nova Entrada
+        </button>
+    </header>
+
+    <main id="mainEstadias"></main>
+
+    <div id="cadastroEstadia" class="modal oculto">
+        <div class="janela">
+            <h2>Registrar Entrada</h2>
+            <form id="formEstadia">
+                <label>Placa do Veículo</label>
+                <select id="placaEstadia" required>
+                    <option value="">Selecione...</option>
+                </select>
+
+                <label>Valor por Hora R$</label>
+                <input type="number" id="valorHora" step="0.01" required>
+
+                <br><br>
+                <button type="reset" onclick="cadastroEstadia.classList.add('oculto')">
+                    Cancelar
+                </button>
+                <button type="submit">
+                    Registrar
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="detalhesEstadia" class="modal oculto">
+        <div class="janela">
+            <h2 id="tituloEstadia"></h2>
+            
+            <label><b>Placa</b></label>
+            <input type="text" id="estPlaca" disabled>
+
+            <label><b>Proprietário</b></label>
+            <input type="text" id="estProprietario" disabled>
+
+            <label><b>Entrada</b></label>
+            <input type="text" id="estEntrada" disabled>
+
+            <label><b>Saída</b></label>
+            <input type="text" id="estSaida" disabled>
+
+            <label><b>Valor/Hora</b></label>
+            <input type="text" id="estValorHora" disabled>
+
+            <label><b>Valor Total</b></label>
+            <input type="text" id="estValorTotal" disabled>
+
+            <br><br>
+            <button id="btnFinalizar" onclick="finalizarEstadia()">Finalizar Estadia</button>
+            <button onclick="excluirEstadia()">Excluir</button>
+            <button onclick="detalhesEstadia.classList.add('oculto')">
+                Fechar
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

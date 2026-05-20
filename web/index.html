@@ -1,11 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estacionamento ACME</title>
+    <title>Estacionamento - Automóveis</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <h1>Estacionamento</h1>
+        <nav>
+            <a href="index.html" class="ativo">Automóveis</a>
+            <a href="estadias.html">Estadias</a>
+        </nav>
+        <button onclick="cadastro.classList.remove('oculto')">
+            Adicionar Veículo
+        </button>
+    </header>
+
+    <main></main>
+
+    <div id="cadastro" class="modal oculto">
+        <div class="janela">
+            <h2>Adicionar Automóvel</h2>
+            <form id="formCad">
+                <label>Placa</label>
+                <input type="text" id="placa" maxlength="8" required>
+
+                <label>Proprietário</label>
+                <input type="text" id="proprietario" required>
+
+                <label>Tipo</label>
+                <select id="tipo" required>
+                    <option value="CARRO">Carro</option>
+                    <option value="MOTO">Moto</option>
+                    <option value="CAMINHAO">Caminhão</option>
+                    <option value="VAN">Van</option>
+                </select>
+
+                <label>Modelo</label>
+                <input type="text" id="modelo" required>
+
+                <label>Marca</label>
+                <input type="text" id="marca">
+
+                <label>Cor</label>
+                <input type="text" id="cor">
+
+                <label>Ano</label>
+                <input type="text" id="ano" inputmode="numeric" maxlength="4">
+
+                <label>Telefone</label>
+                <input type="tel" id="telefone" required>
+
+                <label>URL da Imagem</label>
+                <input type="text" id="imagem">
+
+                <br><br>
+                <button type="reset" onclick="cadastro.classList.add('oculto')">
+                    Cancelar
+                </button>
+                <button type="submit">
+                    Salvar
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="detalhes" class="modal oculto">
+        <div class="janela">
+            <h2 id="tituloAuto"></h2>
+            <img id="imgAuto">
+
+            <label><b>Placa</b></label>
+            <input type="text" id="placaEdit" disabled>
+
+            <label><b>Proprietário</b></label>
+            <input type="text" id="proprietarioEdit">
+
+            <label><b>Tipo</b></label>
+            <select id="tipoEdit">
+                <option value="CARRO">Carro</option>
+                <option value="MOTO">Moto</option>
+                <option value="CAMINHAO">Caminhão</option>
+                <option value="VAN">Van</option>
+            </select>
+
+            <label><b>Modelo</b></label>
+            <input type="text" id="modeloEdit">
+
+            <label><b>Marca</b></label>
+            <input type="text" id="marcaEdit">
+
+            <label><b>Cor</b></label>
+            <input type="text" id="corEdit">
+
+            <label><b>Ano</b></label>
+            <input type="text" id="anoEdit" inputmode="numeric" maxlength="4">
+
+            <label><b>Telefone</b></label>
+            <input type="tel" id="telefoneEdit">
+
+            <label><b>Imagem (URL)</b></label>
+            <input type="text" id="imgEdit">
+
+            <br><br>
+            <button onclick="salvarEdicao()">Salvar</button>
+            <button onclick="excluirAutomovel()">Excluir</button>
+            <button onclick="detalhes.classList.add('oculto')">
+                Fechar
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
